@@ -1,0 +1,13 @@
+App(
+    appid="servo_motor",
+    name="ServoMotor",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="servomotor_app",
+    stack_size=3 * 1024,
+    fap_category="GPIO",
+    fap_version="1.0",
+    fap_description="Servo tester: angle control, hardware PWM, animated servo",
+    fap_author="alcdaniel",
+    fap_icon="icon.png",
+    requires=["gui", "power"],
+)

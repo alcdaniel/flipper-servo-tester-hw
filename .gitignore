@@ -1,0 +1,7 @@
+dist/
+.vscode/
+.clang-format
+.editorconfig
+.gitignore.bak
+*.elf
+.DS_Store
