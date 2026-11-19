@@ -8,6 +8,8 @@ Hobby servo tester with angle control, jitter-free hardware PWM and an animated 
 - **Built-in help:** wiring diagram, pulse vs. position explanation and safety tips.
 
 ## Controls
+On screen: [OK] mode = OK cycles the modes; up/down pages = the arrow keys switch windows.
+
 - **OK:** change mode (Manual, Center, Sweep)
 - **Left / Right:** -10 / +10 degrees (hold to repeat)
 - **Down / Up:** next / previous page (Main, Wiring, Pulse info, Safety)

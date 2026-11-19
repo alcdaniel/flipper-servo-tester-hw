@@ -45,6 +45,8 @@ stability and lets you think in degrees, while showing what the horn should be d
 - Fixed 50 Hz frame (20 ms) with 0.3125 us pulse resolution.
 
 ## Controls
+The bottom bar of the main screen shows the two key groups: **[OK] mode** (OK cycles the modes) and **up/down pages** (the arrow keys switch windows). Help pages show the arrows next to the page number.
+
 Pressing Left / Right in Center or Sweep switches to Manual and applies the step.
 
 | Button | Action |

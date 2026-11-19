@@ -136,6 +136,10 @@ static void draw_title(Canvas* canvas, const char* title, Page page) {
     canvas_draw_str(canvas, 3, 8, title);
     snprintf(num, sizeof(num), "%d/%d", page + 1, PageCount);
     canvas_draw_str_aligned(canvas, 125, 8, AlignRight, AlignBottom, num);
+    /* Up/down arrows: pages are browsed with the arrow keys. */
+    int ax = 125 - canvas_string_width(canvas, num) - 5;
+    draw_arrow_v(canvas, ax, 1, false);
+    draw_arrow_v(canvas, ax, 5, true);
     canvas_set_color(canvas, ColorBlack);
 }
 
@@ -280,9 +284,15 @@ static void draw_main(Canvas* canvas, const ServoMotorApp* s) {
     }
     canvas_draw_str_aligned(canvas, 101, 53, AlignCenter, AlignBottom, text);
 
-    /* Hint line (right side, the servo body uses the left bottom corner). */
-    canvas_draw_str_aligned(canvas, 119, 63, AlignRight, AlignBottom, "OK:mode help");
-    draw_arrow_v(canvas, 124, 59, true);
+    /* Hint line, right of the servo: [OK] mode   up/down pages. */
+    canvas_draw_rbox(canvas, 51, 55, 17, 9, 2);
+    canvas_set_color(canvas, ColorWhite);
+    canvas_draw_str(canvas, 54, 63, "OK");
+    canvas_set_color(canvas, ColorBlack);
+    canvas_draw_str(canvas, 70, 63, "mode");
+    draw_arrow_v(canvas, 99, 55, false);
+    draw_arrow_v(canvas, 99, 60, true);
+    canvas_draw_str(canvas, 103, 63, "pages");
 }
 
 /* --------------------------------------------------------- wiring page */
