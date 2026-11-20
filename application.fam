@@ -8,6 +8,7 @@ App(
     fap_version="1.0",
     fap_description="Servo tester: angle control, hardware PWM, animated servo",
     fap_author="alcdaniel",
+    fap_weburl="https://github.com/alcdaniel/flipper-servo-tester-hw",
     fap_icon="icon.png",
     requires=["gui", "power"],
 )
